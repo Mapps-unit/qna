@@ -13,7 +13,6 @@ function QuestionListCol(props) {
 const listBox = css`
   position: relative;
   display: inline-block;
-  -webkit-box-flex: 1;
   flex-grow: 1;
   flex-basis: calc(33.3333% - 20px);
 `;

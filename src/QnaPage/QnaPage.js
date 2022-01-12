@@ -22,6 +22,7 @@ function QnaPage() {
 
 const pageBox = css`
   background-color: #e2e2e2;
+  min-width: 665px;
 `;
 
 const paddingTop = css`
@@ -30,7 +31,6 @@ const paddingTop = css`
 
 const contentsBox = css`
   min-height: 100vh;
-  min-width: 625px;
   max-width: 1000px;
   padding: 0 20px;
   margin: 0 auto;

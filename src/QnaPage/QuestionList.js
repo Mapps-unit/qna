@@ -54,6 +54,7 @@ const ContentBox = css`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  box-sizing: border-box;
 `;
 
 const listItem = css`

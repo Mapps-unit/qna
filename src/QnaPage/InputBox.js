@@ -28,8 +28,9 @@ const background = css`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  margin: 32px 0;
+  margin: 32px 20px;
   border-radius: 10px;
+  box-sizing: border-box;
 `;
 
 const removeButtonCss = css`
