@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import QuestionBox from "./QuestionBox";
+import QuestionList from "./QuestionList";
 import InputBox from "./InputBox";
 
 function QnaPage() {
@@ -14,7 +14,7 @@ function QnaPage() {
           지금 바로 아래 버튼을 눌러 확인해보세요.
         </p>
         <InputBox></InputBox>
-        <QuestionBox></QuestionBox>
+        <QuestionList></QuestionList>
       </div>
     </div>
   );

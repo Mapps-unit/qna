@@ -56,9 +56,6 @@ const removeInputCss = css`
   border: none;
   box-shadow: none;
   font-size: 1em;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
   appearance: none;
 `;
 
