@@ -5,7 +5,7 @@ import InputBox from "./InputBox";
 
 function QnaPage() {
   return (
-    <div css={pageBox}>
+    <div css={[pageBox, paddingBottom]}>
       <div css={contentsBox}>
         <h2 css={[paddingTop, header1, colorWhite]}>디자인이 궁금한 순간</h2>
         <p css={[header2, colorWhite]}>
@@ -27,6 +27,10 @@ const pageBox = css`
 
 const paddingTop = css`
   padding-top: 300px;
+`;
+
+const paddingBottom = css`
+  padding-bottom: 300px;
 `;
 
 const contentsBox = css`
