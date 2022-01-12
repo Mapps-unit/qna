@@ -2,72 +2,47 @@
 import { css } from "@emotion/react";
 import QuestionBoxLine from "./QuestionBoxLine";
 
+function LiBoxForm(order, color, contents) {
+  return (
+    <>
+      <li css={liCss}>
+        <div css={[QuestionBoxCss, color]}>
+          <div css={Question21th}>
+            <p css={Question21thp}>{order}번째 궁금함</p>
+          </div>
+          <p css={Question21thc}>{contents}</p>
+        </div>
+      </li>
+    </>
+  );
+}
+
 function QuestionBox() {
   return (
-    <div css={ContentBoxcss}>
+    <div css={ContentBox}>
       <QuestionBoxLine>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, blueColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>211번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>디자이너 조직 몇명인지~ 궁금해요~</p>
-          </div>
-        </li>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, yellowColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>138번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>미니멀하기위한 원칙</p>
-          </div>
-        </li>
+        {LiBoxForm(211, blueColor, '디자이너 조직 몇명인지~ 궁금해요~')}
+        {LiBoxForm(138, yellowColor, '미니멀하기위한 원칙')}
       </QuestionBoxLine>
       <QuestionBoxLine>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, yellowColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>211번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>디자이너 조직 몇명인지~ 궁금해요~</p>
-          </div>
-        </li>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, pinkColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>138번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>미니멀하기위한 원칙</p>
-          </div>
-        </li>
+        {LiBoxForm(123, yellowColor, 'heom님 너무 멋있어요')}
+        {LiBoxForm(388, pinkColor, 'maaps팀 짱짱맨 최고')}
       </QuestionBoxLine>
       <QuestionBoxLine>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, orangeColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>211번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>디자이너 조직 몇명인지~ 궁금해요~</p>
-          </div>
-        </li>
-        <li css={liCss}>
-          <div css={[QuestionBoxCss, greenColor]}>
-            <div css={Question21th}>
-              <p css={Question21thp}>138번째 궁금함</p>
-            </div>
-            <p css={Question21thc}>미니멀하기위한 원칙</p>
-          </div>
-        </li>
+        {LiBoxForm(51, orangeColor, '51은 구디에서 저희 집까지 가는 버스 번호입니다.')}
+        {LiBoxForm(522, greenColor, '이것은 샘플 코드입니다. 태호킴이 손 봐줄겁니다.')}
       </QuestionBoxLine>
     </div>
   );
 }
 
-const ContentBoxcss = css`
+const ContentBox = css`
   width: 100%;
   margin: 0 0 -20px;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 `;
 
 const liCss = css`
@@ -122,11 +97,11 @@ const pinkColor = css`
 `;
 
 const orangeColor = css`
-    background-color: rgb(254, 131, 58);
+  background-color: rgb(254, 131, 58);
 `;
 
 const greenColor = css`
-    background-color: rgb(0, 160, 78);
+  background-color: rgb(0, 160, 78);
 `;
 
 export default QuestionBox;

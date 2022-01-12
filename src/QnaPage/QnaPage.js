@@ -1,38 +1,53 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import QuestionBox from './QuestionBox'
+import QuestionBox from "./QuestionBox";
+import InputBox from "./InputBox";
 
 function QnaPage() {
   return (
-    <div css={backgroundBlack}>
-      <h2 css={[header2Css, colorWhite]}>디자인이 궁금한 순간</h2>
-      <p css={[header3Css, colorWhite]}>
-        기다리고 기다리던 Q&A 영상이 올라왔어요.
-        <br />
-        지금 바로 아래 버튼을 눌러 확인해보세요.
-      </p>
-      <QuestionBox></QuestionBox>
+    <div css={pageBox}>
+      <div css={contentsBox}>
+        <h2 css={[paddingTop, header1, colorWhite]}>디자인이 궁금한 순간</h2>
+        <p css={[header2, colorWhite]}>
+          기다리고 기다리던 Q&A 영상이 올라왔어요.
+          <br />
+          지금 바로 아래 버튼을 눌러 확인해보세요.
+        </p>
+        <InputBox></InputBox>
+        <QuestionBox></QuestionBox>
+      </div>
     </div>
   );
 }
 
-const backgroundBlack = css`
-  background-color: black;
-  height: 2000px;
+const pageBox = css`
+  background-color: #e2e2e2;
+`;
+
+const paddingTop = css`
+  padding-top: 300px;
+`;
+
+const contentsBox = css`
+  min-height: 100vh;
+  min-width: 625px;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
 `;
 
 const colorWhite = css`
-  color: #ffffff;
+  color: #ef6408;
 `;
 
-const header2Css = css`
+const header1 = css`
   font-size: 50px;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
 `;
 
-const header3Css = css`
+const header2 = css`
   margin-top: 20px;
   font-size: 22px;
   font-weight: 400;

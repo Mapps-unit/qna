@@ -3,14 +3,14 @@ import { css } from "@emotion/react";
 
 function QuestionBoxLine(props) {
   return (
-    <div css={divCss}>
+    <div css={listBox}>
       <ul css={AbsolUlCss}></ul>
       <ul css={ulCss}>{props.children}</ul>
     </div>
   );
 }
 
-const divCss = css`
+const listBox = css`
   position: relative;
   display: inline-block;
   -webkit-box-flex: 1;
@@ -28,7 +28,7 @@ const AbsolUlCss = css`
 `;
 
 const ulCss = css`
-  padding: 20px;
+  box-sizing: border-box;
   margin: 0px;
   list-style: none;
 `;
