@@ -1,18 +1,42 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { useState } from "react";
 
 const mainColor = "#ef6408";
 const subColor = "#F0986C";
 const inputColor = "#fff9f6";
 
 function InputBox(props) {
+  const [inputmessage, setInputmessage] = useState("");
+
+  function sendQnA() {
+    console.log(inputmessage);
+    console.log("--- 전송이 완료되었습니다. ---");
+    //대충 dispatch 하는 내용
+  }
+
+  const handleMessageChange = ({ target: { value } }) => {
+    setInputmessage(value);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      sendQnA();
+    }
+  };
+
   return (
     <div css={[background]}>
       <input
         css={[removeInputCss, inputBox]}
+        value={inputmessage}
         placeholder="이런 점이 개선되었으면 좋겠어요"
+        onChange={handleMessageChange}
+        onKeyDown={handleKeyDown}
       ></input>
-      <button css={[removeButtonCss, buttonBox]}>남기기</button>
+      <button css={[removeButtonCss, buttonBox]} onClick={sendQnA}>
+        남기기
+      </button>
     </div>
   );
 }

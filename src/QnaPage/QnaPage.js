@@ -9,7 +9,7 @@ function QnaPage() {
       <div css={contentsBox}>
         <h2 css={[paddingTop, header1, colorWhite]}>디자인이 궁금한 순간</h2>
         <p css={[header2, colorWhite]}>
-          기다리고 기다리던 Q&A 영상이 올라왔어요.
+          기다리고 기다리던 Q{'&'}A 영상이 올라왔어요.
           <br />
           지금 바로 아래 버튼을 눌러 확인해보세요.
         </p>
