@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import React from "react";
 
 function MainPage(props) {
   return (
@@ -12,19 +11,19 @@ function MainPage(props) {
         <p css={[fontSetting]}>YOUR</p>
       </div>
       <div>
-        <p css={[fontSetting, floatLeft, colorMain]}>O</p>
+        <p css={[fontSetting, floatLeft, colorMain, moveLeft]}>O</p>
         <p css={[fontSetting, floatLeft, disapppear]}>W</p>
-        <p css={[fontSetting, floatLeft, colorMain]}>N&nbsp;</p>
-        <p css={[fontSetting, floatLeft]}>WEBS</p>
-        <p css={[fontSetting, floatLeft]}>IT</p>
-        <p css={[fontSetting, floatLeft]}>E</p>
+        <p css={[fontSetting, floatLeft, colorMain, moveLeft]}>N&nbsp;</p>
+        <p css={[fontSetting, floatLeft, disapppear]}>WEBS</p>
+        <p css={[fontSetting, floatLeft, colorMain, moveLeft]}>IT</p>
+        <p css={[fontSetting, floatLeft, disapppear]}>E</p>
       </div>
     </div>
   );
 }
 
 const fontSetting = css`
-  font-size: 2em;
+  font-size: 2rem;
   font-weight:500;
 `;
 
@@ -38,19 +37,36 @@ const floatLeft = css`
 
 const disapppearAnimation = keyframes`
   0 {
-    transform: translateY(0);    
-  }
-  50% {
-    transform: translateY(-15px);
+    opacity: 1;   
   }
   100% {
-    transform: translateY(0);
+    opacity: 0;
   }
 `;
 
 const disapppear = css`
-  animation: ${disapppearAnimation} 2s ease infinite;
+animation: ${disapppearAnimation} 1s ease-in-out;
+animation-fill-mode: both;
+animation-iteration-count: 1;
 `;
 
+const moveAnimation = keyframes`
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    left: 1rem;
+  }
+`;
+
+const moveLeft = css`
+  position: relative;
+  animation: ${moveAnimation} 1s ease;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+`;
 
 export default MainPage;
